@@ -54,3 +54,19 @@
   .thm-col-txt{
     color: #cdb35a;
   }
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  th {
+    background-color: #f4f4f4;
+  }
+
+  #table-container{
+      min-height: 90vh;
+  }
+
+  .inl-block{
+    display: inline-block !important;
+  }

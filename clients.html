@@ -12,214 +12,123 @@
     <meta property="og:url" content="https://skcivil.in">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SK Contractors">
-
     <link rel="canonical" href="https://skcivil.in">
     <link rel="icon" href="images/logo-icon.png" type="image/x-icon">
-
-
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-
-    
-    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
-    <style>
-      .gradient {
-        /* background: linear-gradient(90deg, #d53369 0%, #daae51 100%); */
-      }
-    </style>
-    <style>
-      .work-sans {
-          font-family: 'Work Sans', sans-serif;
-      }
-              
-      #menu-toggle:checked + #menu {
-          display: block;
-      }
-      
-      .hover\:grow {
-          transition: all 0.3s;
-          transform: scale(1);
-      }
-      
-      .hover\:grow:hover {
-          transform: scale(1.02);
-      }
-      
-      .carousel-open:checked + .carousel-item {
-          position: static;
-          opacity: 100;
-      }
-      
-      .carousel-item {
-          -webkit-transition: opacity 0.6s ease-out;
-          transition: opacity 0.6s ease-out;
-      }
-      
-      #carousel-1:checked ~ .control-1,
-      #carousel-2:checked ~ .control-2,
-      #carousel-3:checked ~ .control-3 {
-          display: block;
-      }
-      
-      .carousel-indicators {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          position: absolute;
-          bottom: 2%;
-          left: 0;
-          right: 0;
-          text-align: center;
-          z-index: 10;
-      }
-      
-      #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-      #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-      #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-          color: #000;
-      }
-      table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 20px;
-      
-    }
-    th, td {
-      padding: 10px;
-      border: 1px solid #ccc;
-      text-align: left;
-    }
-    th {
-      background-color: #f4f4f4;
-    }
-
-    #table-container{
-        min-height: 90vh;
-    }
-  </style>
-
-
+    <link rel="stylesheet" href="styles.css">
 
   </head>
-  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+  <body class="leading-normal bg-black tracking-normal thm-col-txt gradient" style="font-family: 'Source Sans Pro', sans-serif;">
     <!--Nav-->
-    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+    <nav id="header"  class=" bg-black  fixed w-full z-30 top-0 thm-col-txt">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
-          <!-- <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-            <span>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 128 128" version="1.1">
-            <g id="surface1">
-            <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 68 0.0703125 C 64.230469 0.390625 60.738281 1.046875 57 2.164062 C 56.261719 2.382812 55.53125 2.589844 55.378906 2.625 C 55.21875 2.648438 55.101562 2.714844 55.101562 2.761719 C 55.101562 2.933594 55.851562 2.957031 56.351562 2.808594 C 57.460938 2.488281 59.21875 2.371094 60.671875 2.519531 C 65.890625 3.074219 71.550781 5.652344 76.320312 9.667969 C 77.808594 10.914062 80.191406 13.6875 81.03125 15.148438 C 82.109375 17.023438 82.609375 18.476562 82.800781 20.316406 C 82.96875 21.972656 82.75 23.242188 81.960938 25.09375 L 81.449219 26.300781 L 81.449219 27.625 C 81.449219 28.410156 81.511719 29.191406 81.589844 29.523438 C 81.75 30.179688 82.238281 31.378906 82.480469 31.6875 C 82.628906 31.886719 82.609375 31.917969 82.289062 32.277344 C 82.101562 32.496094 77.328125 37.535156 71.691406 43.488281 L 61.421875 54.308594 L 53.640625 46.539062 C 49.351562 42.269531 45.71875 38.640625 45.570312 38.492188 L 45.289062 38.214844 L 45.738281 36.121094 C 47.171875 29.503906 49.589844 18.222656 49.621094 18.050781 C 49.640625 17.898438 48.941406 17.371094 46.75 15.875 C 36.648438 8.976562 28.558594 3.417969 27.050781 2.3125 C 26.390625 1.839844 25.800781 1.4375 25.730469 1.425781 C 25.640625 1.40625 22.128906 5.042969 19.378906 8.011719 L 18.710938 8.738281 L 23.980469 14.296875 C 30.660156 21.339844 31.738281 22.480469 32.320312 23.089844 L 32.78125 23.585938 L 32.179688 25.808594 C 31.851562 27.027344 31.5 28.339844 31.398438 28.71875 C 31.03125 30.113281 30.210938 33.105469 30.128906 33.371094 C 30.039062 33.632812 29.679688 33.75 25.300781 35.0625 C 20.769531 36.421875 20.550781 36.476562 20.359375 36.28125 C 20.261719 36.179688 17.078125 32.839844 13.320312 28.859375 L 6.46875 21.640625 L 6.210938 21.90625 C 2.441406 25.851562 0.109375 28.351562 0.0703125 28.476562 C 0.0390625 28.570312 1.53125 30.882812 3.769531 34.199219 C 7.628906 39.917969 10.351562 43.996094 14.089844 49.691406 C 15.269531 51.488281 16.289062 52.949219 16.371094 52.949219 C 16.5 52.949219 17.160156 52.824219 19.648438 52.316406 C 20.148438 52.214844 21.058594 52.027344 21.679688 51.902344 C 22.289062 51.785156 23.308594 51.578125 23.929688 51.453125 C 24.539062 51.339844 25.570312 51.132812 26.199219 51.003906 C 26.828125 50.878906 27.871094 50.671875 28.5 50.542969 C 29.128906 50.417969 30.171875 50.210938 30.800781 50.082031 C 31.429688 49.957031 32.488281 49.738281 33.148438 49.613281 C 33.808594 49.472656 34.578125 49.324219 34.851562 49.265625 L 35.351562 49.175781 L 36.601562 50.578125 C 37.839844 51.984375 46.109375 61.238281 46.828125 62.03125 L 47.199219 62.457031 L 42.828125 66.878906 C 40.421875 69.316406 35.601562 74.199219 32.101562 77.742188 C 28.609375 81.277344 23.769531 86.167969 21.359375 88.621094 C 12.429688 97.65625 9.089844 101.03125 6.839844 103.320312 C 5.558594 104.609375 4.269531 105.980469 3.96875 106.359375 C 2.78125 107.84375 2.410156 109.511719 2.941406 111.113281 C 3.230469 112.011719 3.589844 112.667969 4.320312 113.632812 C 4.921875 114.429688 13.339844 123.328125 14.179688 124.050781 C 14.878906 124.660156 16.109375 125.363281 17.101562 125.722656 C 17.710938 125.941406 18.070312 125.984375 19.050781 125.984375 C 20.441406 125.984375 21.011719 125.824219 21.988281 125.15625 C 22.621094 124.71875 23.488281 123.765625 36.550781 109.238281 C 38.808594 106.726562 41.441406 103.804688 42.398438 102.734375 C 44.101562 100.847656 45.320312 99.5 54.148438 89.667969 C 60.441406 82.660156 62.78125 80.09375 62.851562 80.105469 C 62.898438 80.105469 71 89.164062 77 95.941406 C 78.238281 97.335938 81.949219 101.511719 85.25 105.207031 C 88.550781 108.914062 93.121094 114.039062 95.398438 116.605469 C 102.46875 124.535156 102.828125 124.9375 103.5 125.492188 C 104.851562 126.585938 105.910156 127.183594 107.398438 127.65625 C 108.511719 128.011719 110.828125 128.058594 111.980469 127.734375 C 114.53125 127.03125 116.710938 125.375 118.308594 122.933594 C 118.839844 122.140625 119.628906 120.242188 119.839844 119.25 C 120.550781 116.027344 119.679688 112.78125 117.429688 110.261719 C 116.78125 109.523438 81.5 74.257812 73.808594 66.648438 C 72.488281 65.347656 71.421875 64.230469 71.421875 64.171875 C 71.421875 64.105469 74.179688 61.15625 77.539062 57.613281 C 80.898438 54.066406 85.601562 49.117188 87.988281 46.59375 L 92.320312 42.027344 L 93.101562 42.660156 C 94.011719 43.382812 95.070312 43.984375 96 44.269531 C 96.980469 44.582031 99.128906 44.558594 100.488281 44.222656 C 101.761719 43.914062 102.519531 43.902344 103.539062 44.203125 C 105.480469 44.765625 106.941406 46.101562 109.878906 49.992188 L 111.078125 51.578125 L 110.101562 52.671875 C 109.308594 53.558594 109.070312 53.917969 108.789062 54.59375 C 108.46875 55.367188 108.449219 55.503906 108.449219 56.574219 C 108.449219 57.554688 108.488281 57.839844 108.730469 58.53125 C 109.261719 60.085938 110.371094 61.433594 111.75 62.167969 C 112.699219 62.6875 113.328125 62.847656 114.410156 62.847656 C 115.519531 62.847656 116.328125 62.59375 117.140625 61.996094 C 117.648438 61.617188 126.058594 52.847656 126.871094 51.84375 C 128.191406 50.222656 128.359375 47.746094 127.300781 45.6875 C 126.769531 44.648438 125.691406 43.511719 124.78125 43.003906 C 123.738281 42.441406 123.28125 42.3125 122.148438 42.3125 C 121.121094 42.3125 120.511719 42.476562 119.660156 42.957031 L 119.28125 43.175781 L 119.03125 42.914062 C 118.53125 42.394531 117.070312 40.324219 116.480469 39.308594 C 116.148438 38.734375 115.390625 37.15625 114.800781 35.796875 C 113.550781 32.921875 113.300781 32.402344 112.46875 31.078125 C 111.46875 29.46875 109.238281 26.507812 108.191406 25.382812 C 107.050781 24.171875 103.109375 19.925781 102.25 18.992188 C 100.941406 17.566406 93.941406 10.039062 93.351562 9.425781 C 92.339844 8.355469 91.039062 7.21875 89.660156 6.160156 C 85.460938 2.945312 81.050781 1.117188 75.449219 0.277344 C 74.289062 0.105469 69.269531 -0.0351562 68 0.0703125 Z M 111.609375 113.046875 C 112.511719 113.335938 113.421875 114.070312 113.949219 114.902344 C 114.539062 115.808594 114.738281 116.546875 114.738281 117.753906 C 114.738281 118.640625 114.710938 118.8125 114.371094 119.609375 C 113.738281 121.128906 112.640625 122.058594 111.019531 122.453125 C 109.988281 122.695312 108.980469 122.53125 107.949219 121.957031 C 107.078125 121.472656 106.75 121.09375 106.488281 120.230469 C 105.878906 118.226562 106.320312 115.441406 107.488281 113.933594 C 107.988281 113.277344 108.539062 112.96875 109.398438 112.828125 C 110.199219 112.703125 110.75 112.757812 111.609375 113.046875 Z M 111.609375 113.046875 "/>
-            </g>
-            </svg>
-            </span>           
-            <span>SKCIVIL</span> 
-          </a> -->
-
-          <a class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-black" href="#">
+          <a class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl thm-blu-txt" href="#">
             <!--Icon from: http://www.potlabicons.com/ -->
-            <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+            <!-- <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
               <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)"></rect>
               <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 68 0.0703125 C 64.230469 0.390625 60.738281 1.046875 57 2.164062 C 56.261719 2.382812 55.53125 2.589844 55.378906 2.625 C 55.21875 2.648438 55.101562 2.714844 55.101562 2.761719 C 55.101562 2.933594 55.851562 2.957031 56.351562 2.808594 C 57.460938 2.488281 59.21875 2.371094 60.671875 2.519531 C 65.890625 3.074219 71.550781 5.652344 76.320312 9.667969 C 77.808594 10.914062 80.191406 13.6875 81.03125 15.148438 C 82.109375 17.023438 82.609375 18.476562 82.800781 20.316406 C 82.96875 21.972656 82.75 23.242188 81.960938 25.09375 L 81.449219 26.300781 L 81.449219 27.625 C 81.449219 28.410156 81.511719 29.191406 81.589844 29.523438 C 81.75 30.179688 82.238281 31.378906 82.480469 31.6875 C 82.628906 31.886719 82.609375 31.917969 82.289062 32.277344 C 82.101562 32.496094 77.328125 37.535156 71.691406 43.488281 L 61.421875 54.308594 L 53.640625 46.539062 C 49.351562 42.269531 45.71875 38.640625 45.570312 38.492188 L 45.289062 38.214844 L 45.738281 36.121094 C 47.171875 29.503906 49.589844 18.222656 49.621094 18.050781 C 49.640625 17.898438 48.941406 17.371094 46.75 15.875 C 36.648438 8.976562 28.558594 3.417969 27.050781 2.3125 C 26.390625 1.839844 25.800781 1.4375 25.730469 1.425781 C 25.640625 1.40625 22.128906 5.042969 19.378906 8.011719 L 18.710938 8.738281 L 23.980469 14.296875 C 30.660156 21.339844 31.738281 22.480469 32.320312 23.089844 L 32.78125 23.585938 L 32.179688 25.808594 C 31.851562 27.027344 31.5 28.339844 31.398438 28.71875 C 31.03125 30.113281 30.210938 33.105469 30.128906 33.371094 C 30.039062 33.632812 29.679688 33.75 25.300781 35.0625 C 20.769531 36.421875 20.550781 36.476562 20.359375 36.28125 C 20.261719 36.179688 17.078125 32.839844 13.320312 28.859375 L 6.46875 21.640625 L 6.210938 21.90625 C 2.441406 25.851562 0.109375 28.351562 0.0703125 28.476562 C 0.0390625 28.570312 1.53125 30.882812 3.769531 34.199219 C 7.628906 39.917969 10.351562 43.996094 14.089844 49.691406 C 15.269531 51.488281 16.289062 52.949219 16.371094 52.949219 C 16.5 52.949219 17.160156 52.824219 19.648438 52.316406 C 20.148438 52.214844 21.058594 52.027344 21.679688 51.902344 C 22.289062 51.785156 23.308594 51.578125 23.929688 51.453125 C 24.539062 51.339844 25.570312 51.132812 26.199219 51.003906 C 26.828125 50.878906 27.871094 50.671875 28.5 50.542969 C 29.128906 50.417969 30.171875 50.210938 30.800781 50.082031 C 31.429688 49.957031 32.488281 49.738281 33.148438 49.613281 C 33.808594 49.472656 34.578125 49.324219 34.851562 49.265625 L 35.351562 49.175781 L 36.601562 50.578125 C 37.839844 51.984375 46.109375 61.238281 46.828125 62.03125 L 47.199219 62.457031 L 42.828125 66.878906 C 40.421875 69.316406 35.601562 74.199219 32.101562 77.742188 C 28.609375 81.277344 23.769531 86.167969 21.359375 88.621094 C 12.429688 97.65625 9.089844 101.03125 6.839844 103.320312 C 5.558594 104.609375 4.269531 105.980469 3.96875 106.359375 C 2.78125 107.84375 2.410156 109.511719 2.941406 111.113281 C 3.230469 112.011719 3.589844 112.667969 4.320312 113.632812 C 4.921875 114.429688 13.339844 123.328125 14.179688 124.050781 C 14.878906 124.660156 16.109375 125.363281 17.101562 125.722656 C 17.710938 125.941406 18.070312 125.984375 19.050781 125.984375 C 20.441406 125.984375 21.011719 125.824219 21.988281 125.15625 C 22.621094 124.71875 23.488281 123.765625 36.550781 109.238281 C 38.808594 106.726562 41.441406 103.804688 42.398438 102.734375 C 44.101562 100.847656 45.320312 99.5 54.148438 89.667969 C 60.441406 82.660156 62.78125 80.09375 62.851562 80.105469 C 62.898438 80.105469 71 89.164062 77 95.941406 C 78.238281 97.335938 81.949219 101.511719 85.25 105.207031 C 88.550781 108.914062 93.121094 114.039062 95.398438 116.605469 C 102.46875 124.535156 102.828125 124.9375 103.5 125.492188 C 104.851562 126.585938 105.910156 127.183594 107.398438 127.65625 C 108.511719 128.011719 110.828125 128.058594 111.980469 127.734375 C 114.53125 127.03125 116.710938 125.375 118.308594 122.933594 C 118.839844 122.140625 119.628906 120.242188 119.839844 119.25 C 120.550781 116.027344 119.679688 112.78125 117.429688 110.261719 C 116.78125 109.523438 81.5 74.257812 73.808594 66.648438 C 72.488281 65.347656 71.421875 64.230469 71.421875 64.171875 C 71.421875 64.105469 74.179688 61.15625 77.539062 57.613281 C 80.898438 54.066406 85.601562 49.117188 87.988281 46.59375 L 92.320312 42.027344 L 93.101562 42.660156 C 94.011719 43.382812 95.070312 43.984375 96 44.269531 C 96.980469 44.582031 99.128906 44.558594 100.488281 44.222656 C 101.761719 43.914062 102.519531 43.902344 103.539062 44.203125 C 105.480469 44.765625 106.941406 46.101562 109.878906 49.992188 L 111.078125 51.578125 L 110.101562 52.671875 C 109.308594 53.558594 109.070312 53.917969 108.789062 54.59375 C 108.46875 55.367188 108.449219 55.503906 108.449219 56.574219 C 108.449219 57.554688 108.488281 57.839844 108.730469 58.53125 C 109.261719 60.085938 110.371094 61.433594 111.75 62.167969 C 112.699219 62.6875 113.328125 62.847656 114.410156 62.847656 C 115.519531 62.847656 116.328125 62.59375 117.140625 61.996094 C 117.648438 61.617188 126.058594 52.847656 126.871094 51.84375 C 128.191406 50.222656 128.359375 47.746094 127.300781 45.6875 C 126.769531 44.648438 125.691406 43.511719 124.78125 43.003906 C 123.738281 42.441406 123.28125 42.3125 122.148438 42.3125 C 121.121094 42.3125 120.511719 42.476562 119.660156 42.957031 L 119.28125 43.175781 L 119.03125 42.914062 C 118.53125 42.394531 117.070312 40.324219 116.480469 39.308594 C 116.148438 38.734375 115.390625 37.15625 114.800781 35.796875 C 113.550781 32.921875 113.300781 32.402344 112.46875 31.078125 C 111.46875 29.46875 109.238281 26.507812 108.191406 25.382812 C 107.050781 24.171875 103.109375 19.925781 102.25 18.992188 C 100.941406 17.566406 93.941406 10.039062 93.351562 9.425781 C 92.339844 8.355469 91.039062 7.21875 89.660156 6.160156 C 85.460938 2.945312 81.050781 1.117188 75.449219 0.277344 C 74.289062 0.105469 69.269531 -0.0351562 68 0.0703125 Z M 111.609375 113.046875 C 112.511719 113.335938 113.421875 114.070312 113.949219 114.902344 C 114.539062 115.808594 114.738281 116.546875 114.738281 117.753906 C 114.738281 118.640625 114.710938 118.8125 114.371094 119.609375 C 113.738281 121.128906 112.640625 122.058594 111.019531 122.453125 C 109.988281 122.695312 108.980469 122.53125 107.949219 121.957031 C 107.078125 121.472656 106.75 121.09375 106.488281 120.230469 C 105.878906 118.226562 106.320312 115.441406 107.488281 113.933594 C 107.988281 113.277344 108.539062 112.96875 109.398438 112.828125 C 110.199219 112.703125 110.75 112.757812 111.609375 113.046875 Z M 111.609375 113.046875 "/>
-            </svg>
-            SK Contractors
+            </svg> -->
+            <img src="logoIcon.svg" alt="Logo" class="h-20">
           </a>
-
-
         </div>
         <div class="block lg:hidden pr-4">
-          <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <button id="nav-toggle" class="flex items-center p-1 text-pink-800  focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <svg class="h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              <path fill="#cdb35a" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
           </button>
         </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white text-black p-4 lg:p-0 z-20" id="nav-content">
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0  lg:bg-transparent  p-4 lg:p-0 z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
-              <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
+              <a class="inline-block py-2 px-4  font-bold no-underline" href="#">Home</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#expert_into">Services</a>
+              <a class="inline-block  no-underline hover:thm-col-txt hover:text-underline py-2 px-4" href="aboutus.html">About Us</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#clients">Clients</a>
+              <a class="inline-block  no-underline hover:thm-col-txt hover:text-underline py-2 px-4" href="#expert_into">Services</a>
+            </li>
+            <li class="mr-3">
+              <a class="inline-block  no-underline hover:thm-col-txt hover:text-underline py-2 px-4" href="clients.html">Clients</a>
             </li>
           </ul>
           <button
             id="navAction"
-            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            class="mx-auto lg:mx-0 hover:underline  thm-col-txt font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
             Contact
           </button>
         </div>
       </div>
-      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+      <hr class="border-b  opacity-25 my-0 py-0" />
     </nav>
 
-    <div class="pt-24">
 
-    <div class="text-gray-800" id="table-container">Loading...</div>
-    </div>
+    <section>
+      <div class="pt-24">
+
+        <div class="text-gray-800" id="table-container">Loading...</div>
+
+        </div>
+
+    </section>
+
+
+
+
     <!--Footer-->
-    <footer class="bg-white">
+    <footer class="">
       <div class="container mx-auto px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 mb-6 text-black">
+          <div class="flex-1 mb-6 thm-blu-txt">
            
 
-            <a class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-black" href="#">
-              <!--Icon from: http://www.potlabicons.com/ -->
-              <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)"></rect>
-                <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 68 0.0703125 C 64.230469 0.390625 60.738281 1.046875 57 2.164062 C 56.261719 2.382812 55.53125 2.589844 55.378906 2.625 C 55.21875 2.648438 55.101562 2.714844 55.101562 2.761719 C 55.101562 2.933594 55.851562 2.957031 56.351562 2.808594 C 57.460938 2.488281 59.21875 2.371094 60.671875 2.519531 C 65.890625 3.074219 71.550781 5.652344 76.320312 9.667969 C 77.808594 10.914062 80.191406 13.6875 81.03125 15.148438 C 82.109375 17.023438 82.609375 18.476562 82.800781 20.316406 C 82.96875 21.972656 82.75 23.242188 81.960938 25.09375 L 81.449219 26.300781 L 81.449219 27.625 C 81.449219 28.410156 81.511719 29.191406 81.589844 29.523438 C 81.75 30.179688 82.238281 31.378906 82.480469 31.6875 C 82.628906 31.886719 82.609375 31.917969 82.289062 32.277344 C 82.101562 32.496094 77.328125 37.535156 71.691406 43.488281 L 61.421875 54.308594 L 53.640625 46.539062 C 49.351562 42.269531 45.71875 38.640625 45.570312 38.492188 L 45.289062 38.214844 L 45.738281 36.121094 C 47.171875 29.503906 49.589844 18.222656 49.621094 18.050781 C 49.640625 17.898438 48.941406 17.371094 46.75 15.875 C 36.648438 8.976562 28.558594 3.417969 27.050781 2.3125 C 26.390625 1.839844 25.800781 1.4375 25.730469 1.425781 C 25.640625 1.40625 22.128906 5.042969 19.378906 8.011719 L 18.710938 8.738281 L 23.980469 14.296875 C 30.660156 21.339844 31.738281 22.480469 32.320312 23.089844 L 32.78125 23.585938 L 32.179688 25.808594 C 31.851562 27.027344 31.5 28.339844 31.398438 28.71875 C 31.03125 30.113281 30.210938 33.105469 30.128906 33.371094 C 30.039062 33.632812 29.679688 33.75 25.300781 35.0625 C 20.769531 36.421875 20.550781 36.476562 20.359375 36.28125 C 20.261719 36.179688 17.078125 32.839844 13.320312 28.859375 L 6.46875 21.640625 L 6.210938 21.90625 C 2.441406 25.851562 0.109375 28.351562 0.0703125 28.476562 C 0.0390625 28.570312 1.53125 30.882812 3.769531 34.199219 C 7.628906 39.917969 10.351562 43.996094 14.089844 49.691406 C 15.269531 51.488281 16.289062 52.949219 16.371094 52.949219 C 16.5 52.949219 17.160156 52.824219 19.648438 52.316406 C 20.148438 52.214844 21.058594 52.027344 21.679688 51.902344 C 22.289062 51.785156 23.308594 51.578125 23.929688 51.453125 C 24.539062 51.339844 25.570312 51.132812 26.199219 51.003906 C 26.828125 50.878906 27.871094 50.671875 28.5 50.542969 C 29.128906 50.417969 30.171875 50.210938 30.800781 50.082031 C 31.429688 49.957031 32.488281 49.738281 33.148438 49.613281 C 33.808594 49.472656 34.578125 49.324219 34.851562 49.265625 L 35.351562 49.175781 L 36.601562 50.578125 C 37.839844 51.984375 46.109375 61.238281 46.828125 62.03125 L 47.199219 62.457031 L 42.828125 66.878906 C 40.421875 69.316406 35.601562 74.199219 32.101562 77.742188 C 28.609375 81.277344 23.769531 86.167969 21.359375 88.621094 C 12.429688 97.65625 9.089844 101.03125 6.839844 103.320312 C 5.558594 104.609375 4.269531 105.980469 3.96875 106.359375 C 2.78125 107.84375 2.410156 109.511719 2.941406 111.113281 C 3.230469 112.011719 3.589844 112.667969 4.320312 113.632812 C 4.921875 114.429688 13.339844 123.328125 14.179688 124.050781 C 14.878906 124.660156 16.109375 125.363281 17.101562 125.722656 C 17.710938 125.941406 18.070312 125.984375 19.050781 125.984375 C 20.441406 125.984375 21.011719 125.824219 21.988281 125.15625 C 22.621094 124.71875 23.488281 123.765625 36.550781 109.238281 C 38.808594 106.726562 41.441406 103.804688 42.398438 102.734375 C 44.101562 100.847656 45.320312 99.5 54.148438 89.667969 C 60.441406 82.660156 62.78125 80.09375 62.851562 80.105469 C 62.898438 80.105469 71 89.164062 77 95.941406 C 78.238281 97.335938 81.949219 101.511719 85.25 105.207031 C 88.550781 108.914062 93.121094 114.039062 95.398438 116.605469 C 102.46875 124.535156 102.828125 124.9375 103.5 125.492188 C 104.851562 126.585938 105.910156 127.183594 107.398438 127.65625 C 108.511719 128.011719 110.828125 128.058594 111.980469 127.734375 C 114.53125 127.03125 116.710938 125.375 118.308594 122.933594 C 118.839844 122.140625 119.628906 120.242188 119.839844 119.25 C 120.550781 116.027344 119.679688 112.78125 117.429688 110.261719 C 116.78125 109.523438 81.5 74.257812 73.808594 66.648438 C 72.488281 65.347656 71.421875 64.230469 71.421875 64.171875 C 71.421875 64.105469 74.179688 61.15625 77.539062 57.613281 C 80.898438 54.066406 85.601562 49.117188 87.988281 46.59375 L 92.320312 42.027344 L 93.101562 42.660156 C 94.011719 43.382812 95.070312 43.984375 96 44.269531 C 96.980469 44.582031 99.128906 44.558594 100.488281 44.222656 C 101.761719 43.914062 102.519531 43.902344 103.539062 44.203125 C 105.480469 44.765625 106.941406 46.101562 109.878906 49.992188 L 111.078125 51.578125 L 110.101562 52.671875 C 109.308594 53.558594 109.070312 53.917969 108.789062 54.59375 C 108.46875 55.367188 108.449219 55.503906 108.449219 56.574219 C 108.449219 57.554688 108.488281 57.839844 108.730469 58.53125 C 109.261719 60.085938 110.371094 61.433594 111.75 62.167969 C 112.699219 62.6875 113.328125 62.847656 114.410156 62.847656 C 115.519531 62.847656 116.328125 62.59375 117.140625 61.996094 C 117.648438 61.617188 126.058594 52.847656 126.871094 51.84375 C 128.191406 50.222656 128.359375 47.746094 127.300781 45.6875 C 126.769531 44.648438 125.691406 43.511719 124.78125 43.003906 C 123.738281 42.441406 123.28125 42.3125 122.148438 42.3125 C 121.121094 42.3125 120.511719 42.476562 119.660156 42.957031 L 119.28125 43.175781 L 119.03125 42.914062 C 118.53125 42.394531 117.070312 40.324219 116.480469 39.308594 C 116.148438 38.734375 115.390625 37.15625 114.800781 35.796875 C 113.550781 32.921875 113.300781 32.402344 112.46875 31.078125 C 111.46875 29.46875 109.238281 26.507812 108.191406 25.382812 C 107.050781 24.171875 103.109375 19.925781 102.25 18.992188 C 100.941406 17.566406 93.941406 10.039062 93.351562 9.425781 C 92.339844 8.355469 91.039062 7.21875 89.660156 6.160156 C 85.460938 2.945312 81.050781 1.117188 75.449219 0.277344 C 74.289062 0.105469 69.269531 -0.0351562 68 0.0703125 Z M 111.609375 113.046875 C 112.511719 113.335938 113.421875 114.070312 113.949219 114.902344 C 114.539062 115.808594 114.738281 116.546875 114.738281 117.753906 C 114.738281 118.640625 114.710938 118.8125 114.371094 119.609375 C 113.738281 121.128906 112.640625 122.058594 111.019531 122.453125 C 109.988281 122.695312 108.980469 122.53125 107.949219 121.957031 C 107.078125 121.472656 106.75 121.09375 106.488281 120.230469 C 105.878906 118.226562 106.320312 115.441406 107.488281 113.933594 C 107.988281 113.277344 108.539062 112.96875 109.398438 112.828125 C 110.199219 112.703125 110.75 112.757812 111.609375 113.046875 Z M 111.609375 113.046875 "/>
-              </svg>
-              SK CONTRACTORS
-            </a>
   
             
           </div>
           <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Links</p>
+            <p class="uppercase text-white md:mb-6">Links</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">FAQ</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Help</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Support</a>
               </li>
             </ul>
           </div>
 
           <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Social</p>
+            <p class="uppercase text-white md:mb-6">Social</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Facebook</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Linkedin</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Twitter</a>
               </li>
             </ul>
           </div>
           <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Company</p>
+            <p class="uppercase text-white md:mb-6">Company</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Official Blog</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">About Us</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Contact</a>
               </li>
             </ul>
           </div>
@@ -243,57 +152,77 @@
         <a target="_blank" href="https://wa.me/+919769039997?text=Hi%20SkCivil%20Team"><img style="max-width: initial;height: 9vh;" src="whatsapp.svg" alt="" srcset=""></a>
       </div>      
     </footer>
-    <!-- jQuery if you need it
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  -->
 
-  <script>
-    const sheetID = '1Z1tMNOEJDt13JdEtefIZGCkTkGtlNtoZGpc4FzCvC6o';
-    const sheetName = 'client_table';
-    const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&sheet=${sheetName}`;
-  
-    fetch(url)
-      .then(response => response.text())
-      .then(dataText => {
-        const jsonData = JSON.parse(dataText.substring(47).slice(0, -2));
-        const tableContainer = document.getElementById('table-container');
-        const table = document.createElement('table');
-  
-        // Create table header
-        const thead = document.createElement('thead');
-        const headerRow = document.createElement('tr');
-        jsonData.table.cols.forEach(col => {
-          const th = document.createElement('th');
-          th.textContent = col.label || '';
-          headerRow.appendChild(th);
+    <script>
+      const sheetID = '1Z1tMNOEJDt13JdEtefIZGCkTkGtlNtoZGpc4FzCvC6o';
+      const sheetName = 'client_table';
+      const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&sheet=${sheetName}`;
+    
+      fetch(url)
+        .then(response => response.text())
+        .then(dataText => {
+          const jsonData = JSON.parse(dataText.substring(47).slice(0, -2));
+          // const tableContainer = document.getElementById('table-container');
+          // const table = document.createElement('table');
+    
+          // Create table header
+          // const thead = document.createElement('thead');
+          // const headerRow = document.createElement('tr');
+          // jsonData.table.cols.forEach(col => {
+          //   const th = document.createElement('th');
+          //   th.textContent = col.label || '';
+          //   headerRow.appendChild(th);
+          // });
+          // thead.appendChild(headerRow);
+          // table.appendChild(thead);
+    
+          // Create table body
+          // const tbody = document.createElement('tbody');
+          const container = document.getElementById('table-container');
+  jsonData.table.rows.forEach(row => {
+    const project = row.c;
+
+    const card = document.createElement('div');
+    card.className =
+      'rounded-lg overflow-hidden border border-gray-100 transition-shadow p-4 flex items-start gap-4 w-full md:w-1/4 bg-white inl-block';
+
+    card.innerHTML = `
+      <!-- Thumbnail -->
+      <div class="w-24 h-24 flex-shrink-0 bg-gray-200 rounded-md overflow-hidden">
+        <img src="https://via.placeholder.com/100x100?text=IMG" alt="Thumbnail" class="w-full h-full object-cover" />
+      </div>
+
+      <!-- Content -->
+      <div class="flex-1 relative">
+        <!-- Sq.ft Badge -->
+        <div class="absolute top-0 right-0 bg-yellow-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow">
+          ${project[2]?.v || ''} sq.ft
+        </div>
+
+        <h2 class="text-lg font-semibold text-gray-800 pr-20">${project[1]?.v || ''}</h2>
+        <p class="text-sm text-gray-500 mt-1"><span class="font-medium text-gray-700">Details:</span> ${project[3]?.v || ''}</p>
+        <p class="text-sm text-gray-500 mt-1"><span class="font-medium text-gray-700">Address:</span> ${project[4]?.v || ''}</p>
+
+        <!-- Architect -->
+        <div class="mt-3 inline-block bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">
+          Architect: ${project[5]?.v || ''}
+        </div>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+          // table.appendChild(tbody);
+    
+          // Append to DOM
+          // tableContainer.innerHTML = '';
+          // tableContainer.appendChild(table);
+        })
+        .catch(error => {
+          document.getElementById('table-container').textContent = 'Error loading data.';
+          console.error('Error:', error);
         });
-        thead.appendChild(headerRow);
-        table.appendChild(thead);
-  
-        // Create table body
-        const tbody = document.createElement('tbody');
-        jsonData.table.rows.forEach(row => {
-          const tr = document.createElement('tr');
-          row.c.forEach(cell => {
-            const td = document.createElement('td');
-            td.textContent = cell ? cell.v : '';
-            tr.appendChild(td);
-          });
-          tbody.appendChild(tr);
-        });
-        table.appendChild(tbody);
-  
-        // Append to DOM
-        tableContainer.innerHTML = '';
-        tableContainer.appendChild(table);
-      })
-      .catch(error => {
-        document.getElementById('table-container').textContent = 'Error loading data.';
-        console.error('Error:', error);
-      });
-  </script>
-  
+    </script>
 
-
-</body>
+  </body>
 </html>

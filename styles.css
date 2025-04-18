@@ -54,6 +54,10 @@
   .thm-col-txt{
     color: #cdb35a;
   }
+  .thm-col-bg{
+    background-color: #cdb35a;
+  }
+
   th, td {
     padding: 10px;
     border: 1px solid #ccc;
@@ -69,4 +73,7 @@
 
   .inl-block{
     display: inline-block !important;
+  }
+  .thm-brd-clr{
+    border-color: #cdb35a;
   }

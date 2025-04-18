@@ -12,135 +12,58 @@
     <meta property="og:url" content="https://skcivil.in">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SK Contractors">
-
     <link rel="canonical" href="https://skcivil.in">
     <link rel="icon" href="images/logo-icon.png" type="image/x-icon">
-
-
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-
-    
-    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
-    <style>
-      .gradient {
-        /* background: linear-gradient(90deg, #d53369 0%, #daae51 100%); */
-      }
-    </style>
-    <style>
-      .work-sans {
-          font-family: 'Work Sans', sans-serif;
-      }
-              
-      #menu-toggle:checked + #menu {
-          display: block;
-      }
-      
-      .hover\:grow {
-          transition: all 0.3s;
-          transform: scale(1);
-      }
-      
-      .hover\:grow:hover {
-          transform: scale(1.02);
-      }
-      
-      .carousel-open:checked + .carousel-item {
-          position: static;
-          opacity: 100;
-      }
-      
-      .carousel-item {
-          -webkit-transition: opacity 0.6s ease-out;
-          transition: opacity 0.6s ease-out;
-      }
-      
-      #carousel-1:checked ~ .control-1,
-      #carousel-2:checked ~ .control-2,
-      #carousel-3:checked ~ .control-3 {
-          display: block;
-      }
-      
-      .carousel-indicators {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          position: absolute;
-          bottom: 2%;
-          left: 0;
-          right: 0;
-          text-align: center;
-          z-index: 10;
-      }
-      
-      #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-      #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-      #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-          color: #000;
-      }
-  </style>
-
-
+    <link rel="stylesheet" href="styles.css">
 
   </head>
-  <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+  <body class="leading-normal bg-black tracking-normal thm-col-txt gradient" style="font-family: 'Source Sans Pro', sans-serif;">
     <!--Nav-->
-    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+    <nav id="header"  class=" bg-black  fixed w-full z-30 top-0 thm-col-txt">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
-          <!-- <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-            <span>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 128 128" version="1.1">
-            <g id="surface1">
-            <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 68 0.0703125 C 64.230469 0.390625 60.738281 1.046875 57 2.164062 C 56.261719 2.382812 55.53125 2.589844 55.378906 2.625 C 55.21875 2.648438 55.101562 2.714844 55.101562 2.761719 C 55.101562 2.933594 55.851562 2.957031 56.351562 2.808594 C 57.460938 2.488281 59.21875 2.371094 60.671875 2.519531 C 65.890625 3.074219 71.550781 5.652344 76.320312 9.667969 C 77.808594 10.914062 80.191406 13.6875 81.03125 15.148438 C 82.109375 17.023438 82.609375 18.476562 82.800781 20.316406 C 82.96875 21.972656 82.75 23.242188 81.960938 25.09375 L 81.449219 26.300781 L 81.449219 27.625 C 81.449219 28.410156 81.511719 29.191406 81.589844 29.523438 C 81.75 30.179688 82.238281 31.378906 82.480469 31.6875 C 82.628906 31.886719 82.609375 31.917969 82.289062 32.277344 C 82.101562 32.496094 77.328125 37.535156 71.691406 43.488281 L 61.421875 54.308594 L 53.640625 46.539062 C 49.351562 42.269531 45.71875 38.640625 45.570312 38.492188 L 45.289062 38.214844 L 45.738281 36.121094 C 47.171875 29.503906 49.589844 18.222656 49.621094 18.050781 C 49.640625 17.898438 48.941406 17.371094 46.75 15.875 C 36.648438 8.976562 28.558594 3.417969 27.050781 2.3125 C 26.390625 1.839844 25.800781 1.4375 25.730469 1.425781 C 25.640625 1.40625 22.128906 5.042969 19.378906 8.011719 L 18.710938 8.738281 L 23.980469 14.296875 C 30.660156 21.339844 31.738281 22.480469 32.320312 23.089844 L 32.78125 23.585938 L 32.179688 25.808594 C 31.851562 27.027344 31.5 28.339844 31.398438 28.71875 C 31.03125 30.113281 30.210938 33.105469 30.128906 33.371094 C 30.039062 33.632812 29.679688 33.75 25.300781 35.0625 C 20.769531 36.421875 20.550781 36.476562 20.359375 36.28125 C 20.261719 36.179688 17.078125 32.839844 13.320312 28.859375 L 6.46875 21.640625 L 6.210938 21.90625 C 2.441406 25.851562 0.109375 28.351562 0.0703125 28.476562 C 0.0390625 28.570312 1.53125 30.882812 3.769531 34.199219 C 7.628906 39.917969 10.351562 43.996094 14.089844 49.691406 C 15.269531 51.488281 16.289062 52.949219 16.371094 52.949219 C 16.5 52.949219 17.160156 52.824219 19.648438 52.316406 C 20.148438 52.214844 21.058594 52.027344 21.679688 51.902344 C 22.289062 51.785156 23.308594 51.578125 23.929688 51.453125 C 24.539062 51.339844 25.570312 51.132812 26.199219 51.003906 C 26.828125 50.878906 27.871094 50.671875 28.5 50.542969 C 29.128906 50.417969 30.171875 50.210938 30.800781 50.082031 C 31.429688 49.957031 32.488281 49.738281 33.148438 49.613281 C 33.808594 49.472656 34.578125 49.324219 34.851562 49.265625 L 35.351562 49.175781 L 36.601562 50.578125 C 37.839844 51.984375 46.109375 61.238281 46.828125 62.03125 L 47.199219 62.457031 L 42.828125 66.878906 C 40.421875 69.316406 35.601562 74.199219 32.101562 77.742188 C 28.609375 81.277344 23.769531 86.167969 21.359375 88.621094 C 12.429688 97.65625 9.089844 101.03125 6.839844 103.320312 C 5.558594 104.609375 4.269531 105.980469 3.96875 106.359375 C 2.78125 107.84375 2.410156 109.511719 2.941406 111.113281 C 3.230469 112.011719 3.589844 112.667969 4.320312 113.632812 C 4.921875 114.429688 13.339844 123.328125 14.179688 124.050781 C 14.878906 124.660156 16.109375 125.363281 17.101562 125.722656 C 17.710938 125.941406 18.070312 125.984375 19.050781 125.984375 C 20.441406 125.984375 21.011719 125.824219 21.988281 125.15625 C 22.621094 124.71875 23.488281 123.765625 36.550781 109.238281 C 38.808594 106.726562 41.441406 103.804688 42.398438 102.734375 C 44.101562 100.847656 45.320312 99.5 54.148438 89.667969 C 60.441406 82.660156 62.78125 80.09375 62.851562 80.105469 C 62.898438 80.105469 71 89.164062 77 95.941406 C 78.238281 97.335938 81.949219 101.511719 85.25 105.207031 C 88.550781 108.914062 93.121094 114.039062 95.398438 116.605469 C 102.46875 124.535156 102.828125 124.9375 103.5 125.492188 C 104.851562 126.585938 105.910156 127.183594 107.398438 127.65625 C 108.511719 128.011719 110.828125 128.058594 111.980469 127.734375 C 114.53125 127.03125 116.710938 125.375 118.308594 122.933594 C 118.839844 122.140625 119.628906 120.242188 119.839844 119.25 C 120.550781 116.027344 119.679688 112.78125 117.429688 110.261719 C 116.78125 109.523438 81.5 74.257812 73.808594 66.648438 C 72.488281 65.347656 71.421875 64.230469 71.421875 64.171875 C 71.421875 64.105469 74.179688 61.15625 77.539062 57.613281 C 80.898438 54.066406 85.601562 49.117188 87.988281 46.59375 L 92.320312 42.027344 L 93.101562 42.660156 C 94.011719 43.382812 95.070312 43.984375 96 44.269531 C 96.980469 44.582031 99.128906 44.558594 100.488281 44.222656 C 101.761719 43.914062 102.519531 43.902344 103.539062 44.203125 C 105.480469 44.765625 106.941406 46.101562 109.878906 49.992188 L 111.078125 51.578125 L 110.101562 52.671875 C 109.308594 53.558594 109.070312 53.917969 108.789062 54.59375 C 108.46875 55.367188 108.449219 55.503906 108.449219 56.574219 C 108.449219 57.554688 108.488281 57.839844 108.730469 58.53125 C 109.261719 60.085938 110.371094 61.433594 111.75 62.167969 C 112.699219 62.6875 113.328125 62.847656 114.410156 62.847656 C 115.519531 62.847656 116.328125 62.59375 117.140625 61.996094 C 117.648438 61.617188 126.058594 52.847656 126.871094 51.84375 C 128.191406 50.222656 128.359375 47.746094 127.300781 45.6875 C 126.769531 44.648438 125.691406 43.511719 124.78125 43.003906 C 123.738281 42.441406 123.28125 42.3125 122.148438 42.3125 C 121.121094 42.3125 120.511719 42.476562 119.660156 42.957031 L 119.28125 43.175781 L 119.03125 42.914062 C 118.53125 42.394531 117.070312 40.324219 116.480469 39.308594 C 116.148438 38.734375 115.390625 37.15625 114.800781 35.796875 C 113.550781 32.921875 113.300781 32.402344 112.46875 31.078125 C 111.46875 29.46875 109.238281 26.507812 108.191406 25.382812 C 107.050781 24.171875 103.109375 19.925781 102.25 18.992188 C 100.941406 17.566406 93.941406 10.039062 93.351562 9.425781 C 92.339844 8.355469 91.039062 7.21875 89.660156 6.160156 C 85.460938 2.945312 81.050781 1.117188 75.449219 0.277344 C 74.289062 0.105469 69.269531 -0.0351562 68 0.0703125 Z M 111.609375 113.046875 C 112.511719 113.335938 113.421875 114.070312 113.949219 114.902344 C 114.539062 115.808594 114.738281 116.546875 114.738281 117.753906 C 114.738281 118.640625 114.710938 118.8125 114.371094 119.609375 C 113.738281 121.128906 112.640625 122.058594 111.019531 122.453125 C 109.988281 122.695312 108.980469 122.53125 107.949219 121.957031 C 107.078125 121.472656 106.75 121.09375 106.488281 120.230469 C 105.878906 118.226562 106.320312 115.441406 107.488281 113.933594 C 107.988281 113.277344 108.539062 112.96875 109.398438 112.828125 C 110.199219 112.703125 110.75 112.757812 111.609375 113.046875 Z M 111.609375 113.046875 "/>
-            </g>
-            </svg>
-            </span>           
-            <span>SKCIVIL</span> 
-          </a> -->
-
-          <a class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-black" href="#">
+          <a class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl thm-blu-txt" href="#">
             <!--Icon from: http://www.potlabicons.com/ -->
-            <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+            <!-- <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
               <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)"></rect>
               <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 68 0.0703125 C 64.230469 0.390625 60.738281 1.046875 57 2.164062 C 56.261719 2.382812 55.53125 2.589844 55.378906 2.625 C 55.21875 2.648438 55.101562 2.714844 55.101562 2.761719 C 55.101562 2.933594 55.851562 2.957031 56.351562 2.808594 C 57.460938 2.488281 59.21875 2.371094 60.671875 2.519531 C 65.890625 3.074219 71.550781 5.652344 76.320312 9.667969 C 77.808594 10.914062 80.191406 13.6875 81.03125 15.148438 C 82.109375 17.023438 82.609375 18.476562 82.800781 20.316406 C 82.96875 21.972656 82.75 23.242188 81.960938 25.09375 L 81.449219 26.300781 L 81.449219 27.625 C 81.449219 28.410156 81.511719 29.191406 81.589844 29.523438 C 81.75 30.179688 82.238281 31.378906 82.480469 31.6875 C 82.628906 31.886719 82.609375 31.917969 82.289062 32.277344 C 82.101562 32.496094 77.328125 37.535156 71.691406 43.488281 L 61.421875 54.308594 L 53.640625 46.539062 C 49.351562 42.269531 45.71875 38.640625 45.570312 38.492188 L 45.289062 38.214844 L 45.738281 36.121094 C 47.171875 29.503906 49.589844 18.222656 49.621094 18.050781 C 49.640625 17.898438 48.941406 17.371094 46.75 15.875 C 36.648438 8.976562 28.558594 3.417969 27.050781 2.3125 C 26.390625 1.839844 25.800781 1.4375 25.730469 1.425781 C 25.640625 1.40625 22.128906 5.042969 19.378906 8.011719 L 18.710938 8.738281 L 23.980469 14.296875 C 30.660156 21.339844 31.738281 22.480469 32.320312 23.089844 L 32.78125 23.585938 L 32.179688 25.808594 C 31.851562 27.027344 31.5 28.339844 31.398438 28.71875 C 31.03125 30.113281 30.210938 33.105469 30.128906 33.371094 C 30.039062 33.632812 29.679688 33.75 25.300781 35.0625 C 20.769531 36.421875 20.550781 36.476562 20.359375 36.28125 C 20.261719 36.179688 17.078125 32.839844 13.320312 28.859375 L 6.46875 21.640625 L 6.210938 21.90625 C 2.441406 25.851562 0.109375 28.351562 0.0703125 28.476562 C 0.0390625 28.570312 1.53125 30.882812 3.769531 34.199219 C 7.628906 39.917969 10.351562 43.996094 14.089844 49.691406 C 15.269531 51.488281 16.289062 52.949219 16.371094 52.949219 C 16.5 52.949219 17.160156 52.824219 19.648438 52.316406 C 20.148438 52.214844 21.058594 52.027344 21.679688 51.902344 C 22.289062 51.785156 23.308594 51.578125 23.929688 51.453125 C 24.539062 51.339844 25.570312 51.132812 26.199219 51.003906 C 26.828125 50.878906 27.871094 50.671875 28.5 50.542969 C 29.128906 50.417969 30.171875 50.210938 30.800781 50.082031 C 31.429688 49.957031 32.488281 49.738281 33.148438 49.613281 C 33.808594 49.472656 34.578125 49.324219 34.851562 49.265625 L 35.351562 49.175781 L 36.601562 50.578125 C 37.839844 51.984375 46.109375 61.238281 46.828125 62.03125 L 47.199219 62.457031 L 42.828125 66.878906 C 40.421875 69.316406 35.601562 74.199219 32.101562 77.742188 C 28.609375 81.277344 23.769531 86.167969 21.359375 88.621094 C 12.429688 97.65625 9.089844 101.03125 6.839844 103.320312 C 5.558594 104.609375 4.269531 105.980469 3.96875 106.359375 C 2.78125 107.84375 2.410156 109.511719 2.941406 111.113281 C 3.230469 112.011719 3.589844 112.667969 4.320312 113.632812 C 4.921875 114.429688 13.339844 123.328125 14.179688 124.050781 C 14.878906 124.660156 16.109375 125.363281 17.101562 125.722656 C 17.710938 125.941406 18.070312 125.984375 19.050781 125.984375 C 20.441406 125.984375 21.011719 125.824219 21.988281 125.15625 C 22.621094 124.71875 23.488281 123.765625 36.550781 109.238281 C 38.808594 106.726562 41.441406 103.804688 42.398438 102.734375 C 44.101562 100.847656 45.320312 99.5 54.148438 89.667969 C 60.441406 82.660156 62.78125 80.09375 62.851562 80.105469 C 62.898438 80.105469 71 89.164062 77 95.941406 C 78.238281 97.335938 81.949219 101.511719 85.25 105.207031 C 88.550781 108.914062 93.121094 114.039062 95.398438 116.605469 C 102.46875 124.535156 102.828125 124.9375 103.5 125.492188 C 104.851562 126.585938 105.910156 127.183594 107.398438 127.65625 C 108.511719 128.011719 110.828125 128.058594 111.980469 127.734375 C 114.53125 127.03125 116.710938 125.375 118.308594 122.933594 C 118.839844 122.140625 119.628906 120.242188 119.839844 119.25 C 120.550781 116.027344 119.679688 112.78125 117.429688 110.261719 C 116.78125 109.523438 81.5 74.257812 73.808594 66.648438 C 72.488281 65.347656 71.421875 64.230469 71.421875 64.171875 C 71.421875 64.105469 74.179688 61.15625 77.539062 57.613281 C 80.898438 54.066406 85.601562 49.117188 87.988281 46.59375 L 92.320312 42.027344 L 93.101562 42.660156 C 94.011719 43.382812 95.070312 43.984375 96 44.269531 C 96.980469 44.582031 99.128906 44.558594 100.488281 44.222656 C 101.761719 43.914062 102.519531 43.902344 103.539062 44.203125 C 105.480469 44.765625 106.941406 46.101562 109.878906 49.992188 L 111.078125 51.578125 L 110.101562 52.671875 C 109.308594 53.558594 109.070312 53.917969 108.789062 54.59375 C 108.46875 55.367188 108.449219 55.503906 108.449219 56.574219 C 108.449219 57.554688 108.488281 57.839844 108.730469 58.53125 C 109.261719 60.085938 110.371094 61.433594 111.75 62.167969 C 112.699219 62.6875 113.328125 62.847656 114.410156 62.847656 C 115.519531 62.847656 116.328125 62.59375 117.140625 61.996094 C 117.648438 61.617188 126.058594 52.847656 126.871094 51.84375 C 128.191406 50.222656 128.359375 47.746094 127.300781 45.6875 C 126.769531 44.648438 125.691406 43.511719 124.78125 43.003906 C 123.738281 42.441406 123.28125 42.3125 122.148438 42.3125 C 121.121094 42.3125 120.511719 42.476562 119.660156 42.957031 L 119.28125 43.175781 L 119.03125 42.914062 C 118.53125 42.394531 117.070312 40.324219 116.480469 39.308594 C 116.148438 38.734375 115.390625 37.15625 114.800781 35.796875 C 113.550781 32.921875 113.300781 32.402344 112.46875 31.078125 C 111.46875 29.46875 109.238281 26.507812 108.191406 25.382812 C 107.050781 24.171875 103.109375 19.925781 102.25 18.992188 C 100.941406 17.566406 93.941406 10.039062 93.351562 9.425781 C 92.339844 8.355469 91.039062 7.21875 89.660156 6.160156 C 85.460938 2.945312 81.050781 1.117188 75.449219 0.277344 C 74.289062 0.105469 69.269531 -0.0351562 68 0.0703125 Z M 111.609375 113.046875 C 112.511719 113.335938 113.421875 114.070312 113.949219 114.902344 C 114.539062 115.808594 114.738281 116.546875 114.738281 117.753906 C 114.738281 118.640625 114.710938 118.8125 114.371094 119.609375 C 113.738281 121.128906 112.640625 122.058594 111.019531 122.453125 C 109.988281 122.695312 108.980469 122.53125 107.949219 121.957031 C 107.078125 121.472656 106.75 121.09375 106.488281 120.230469 C 105.878906 118.226562 106.320312 115.441406 107.488281 113.933594 C 107.988281 113.277344 108.539062 112.96875 109.398438 112.828125 C 110.199219 112.703125 110.75 112.757812 111.609375 113.046875 Z M 111.609375 113.046875 "/>
-            </svg>
-            SK Contractors
+            </svg> -->
+            <img src="logoIcon.svg" alt="Logo" class="h-20">
           </a>
-
-
         </div>
         <div class="block lg:hidden pr-4">
-          <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-            <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <button id="nav-toggle" class="flex items-center p-1 text-pink-800  focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            <svg class="h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              <path fill="#cdb35a" d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
           </button>
         </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0  lg:bg-transparent  p-4 lg:p-0 z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
-              <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
+              <a class="inline-block py-2 px-4  font-bold no-underline" href="#">Home</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="aboutus.html">About Us</a>
+              <a class="inline-block  no-underline hover:thm-col-txt hover:text-underline py-2 px-4" href="aboutus.html">About Us</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#expert_into">Services</a>
+              <a class="inline-block  no-underline hover:thm-col-txt hover:text-underline py-2 px-4" href="#expert_into">Services</a>
             </li>
             <li class="mr-3">
-              <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="clients.html">Clients</a>
+              <a class="inline-block  no-underline hover:thm-col-txt hover:text-underline py-2 px-4" href="clients.html">Clients</a>
             </li>
           </ul>
           <button
             id="navAction"
-            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+            class="mx-auto lg:mx-0 hover:underline  thm-col-txt font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
             Contact
           </button>
         </div>
       </div>
-      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+      <hr class="border-b  opacity-25 my-0 py-0" />
     </nav>
 
 
@@ -157,7 +80,7 @@
           <p class="leading-normal text-2xl mb-8">
             Sub-hero message, not too long and not too short. Make it just right!
           </p>
-          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          <button class="mx-auto lg:mx-0 hover:underline  thm-col-txt font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Subscribe
           </button>
         </div>
@@ -167,21 +90,21 @@
       </div> -->
 
       <div class="carousel relative w-full">
-        <div class="swiper-slide bg-white shadow-lg overflow-hidden max-w-full">
+        <div class="swiper-slide  shadow-lg overflow-hidden max-w-full">
           <!--Slide 1-->
           <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
           <div class="carousel-item absolute opacity-0" style="height:60vh;">
             <div class="block h-full w-full flex pt-6 md:pt-0 md:items-center bg-cover bg-center" style="background-image: url('hero2.jpg');">
               <div class="container mx-auto">
                 <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                  <p class="text-black text-4xl font-bold text-black my-4">Restoring the Magic  of Concrete.</p>
-                  <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view more</a>
+                  <p class="thm-blu-txt text-4xl font-bold my-4">Restoring the Magic  of Concrete.</p>
+                  <a class="text-xl inline-block  leading-relaxed text-white" href="#">view more</a>
                 </div>
               </div>
             </div>
           </div>
-          <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-          <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+          <label for="carousel-3" class="prev control-1 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:thm-col-txt rounded-full leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+          <label for="carousel-2" class="next control-1 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:thm-col-txt rounded-full leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
       
           <!--Slide 2-->
           <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
@@ -189,14 +112,14 @@
             <div class="block h-full w-full flex pt-6 md:pt-0 md:items-center bg-cover bg-center" style="background-image: url('hero.jpg');">
               <div class="container mx-auto">
                 <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                  <p class="text-black text-4xl font-bold text-black my-4">Crafting Interior Excellence.</p>
-                  <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
+                  <p class="thm-blu-txt text-4xl font-bold my-4">Crafting Interior Excellence.</p>
+                  <a class="text-xl inline-block  leading-relaxed text-white" href="#">view product</a>
                 </div>
               </div>
             </div>
           </div>
-          <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-          <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+          <label for="carousel-1" class="prev control-2 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:thm-col-txt rounded-full leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+          <label for="carousel-3" class="next control-2 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:thm-col-txt rounded-full leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
       
           <!--Slide 3-->
           <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
@@ -204,25 +127,25 @@
             <div class="block h-full w-full flex pt-6 md:pt-0 md:items-center bg-cover bg-center" style="background-image: url('hero6.jpg');">
               <div class="container mx-auto">
                 <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                  <p class="text-black text-4xl font-bold text-black my-4">Comprehensive Civil Works.</p>
-                  <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
+                  <p class="thm-blu-txt text-4xl font-bold my-4">Comprehensive Civil Works.</p>
+                  <a class="text-xl inline-block  leading-relaxed text-white" href="#">view product</a>
                 </div>
               </div>
             </div>
           </div>
-          <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
-          <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold text-black hover:text-white rounded-full bg-white hover:bg-gray-900 leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
+          <label for="carousel-2" class="prev control-3 w-10 h-10 ml-2 md:ml-10 absolute cursor-pointer hidden text-3xl font-bold hover:thm-col-txt rounded-full leading-tight text-center z-10 inset-y-0 left-0 my-auto">‹</label>
+          <label for="carousel-1" class="next control-3 w-10 h-10 mr-2 md:mr-10 absolute cursor-pointer hidden text-3xl font-bold hover:thm-col-txt rounded-full leading-tight text-center z-10 inset-y-0 right-0 my-auto">›</label>
       
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li class="inline-block mr-3">
-              <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+              <label for="carousel-1" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 ">•</label>
             </li>
             <li class="inline-block mr-3">
-              <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+              <label for="carousel-2" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 ">•</label>
             </li>
             <li class="inline-block mr-3">
-              <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 hover:text-gray-900">•</label>
+              <label for="carousel-3" class="carousel-bullet cursor-pointer block text-4xl text-gray-400 ">•</label>
             </li>
           </ol>
         </div>
@@ -238,9 +161,9 @@
 
 
 
-    <section class="bg-white border-b py-4">
+    <section class="py-4">
       <div class="container max-w-5xl mx-auto m-8">
-        <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">
+        <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center thm-col-txt">
           Top Building Repair Companies in Mumbai
 
         </h2>
@@ -378,16 +301,16 @@
             </svg> -->
           </div>
           <div class="w-full sm:w-1/2 p-4">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+            <h3 class="text-3xl thm-col-txt font-bold leading-none mb-3">
               Total Solutions for High-Scale Projects
 
             </h3>
-            <p class="text-gray-600 mb-8 text-justify">
+            <p class="text-white mb-8 text-justify">
               At SKcivil (India) we offer a comprehensive suite of services, including structural repairs, rehabilitation, restoration, façade enhancement, elevation upgrades, and painting. Backed by extensive experience across Commercial, Industrial, Hospitality, and Institutional projects, our team is fully equipped to manage complex challenges in structural repairs, remodeling, waterproofing, and more. We understand that every structure presents unique challenges—and we take pride in delivering innovative, long-lasting solutions tailored to each project’s specific needs.
               <br />
               <br />
 
-              <a href="#" class="inline-block px-6 py-2 bg-gray-500 text-white rounded-full text-center hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300">
+              <a href="#" class="inline-block px-6 py-2 thm-col-txt rounded-full text-center hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300">
                 Read More
               </a>
               
@@ -546,10 +469,10 @@
           </div> -->
           <!-- <div class="w-full sm:w-1/2 p-6 mt-6">
             <div class="align-middle">
-              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
+              <h3 class="text-3xl thm-col-txt font-bold leading-none mb-3">
                 Lorem ipsum dolor sit amet
               </h3>
-              <p class="text-gray-600 mb-8">
+              <p class="text-white mb-8">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
                 <br />
                 <br />
@@ -565,7 +488,7 @@
 
 
     <section id="expert_into">
-      <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">
+      <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center thm-col-txt">
         Expert into
       </h2>
 
@@ -588,33 +511,33 @@
               <!-- Slide 1 -->
               <div class="swiper-slide">
                 <img class="w-full" src="expert_into/construction.jpg" alt="Image 1">
-                <div class="swiper-description text-center text-black py-1 text-2xl"> Construction</div>
+                <div class="swiper-description text-center py-1 text-2xl"> Construction</div>
               </div>
               <!-- Slide 2 -->
               <div class="swiper-slide">
                 <img class="w-full" src="expert_into/fabrication.jpg" alt="Image 2">
-                <div class="swiper-description text-center text-black py-1 text-2xl"> Fabrication</div>
+                <div class="swiper-description text-center py-1 text-2xl"> Fabrication</div>
               </div>
               <!-- Slide 3 -->
               <div class="swiper-slide">
                 <img class="w-full" src="expert_into/glass_walls.jpg" alt="Image 3">
-                <div class="swiper-description text-center text-black py-1 text-2xl"> Glass walls</div>
+                <div class="swiper-description text-center py-1 text-2xl"> Glass walls</div>
               </div>
               <!-- Slide 4 -->
               <div class="swiper-slide">
                 <img class="w-full" src="expert_into/interior.jpg" alt="Image 4">
-                <div class="swiper-description text-center text-black py-1 text-2xl"> Interior</div>
+                <div class="swiper-description text-center py-1 text-2xl"> Interior</div>
               </div>
               <!-- Slide 5 -->
               <div class="swiper-slide">
                 <img class="w-full" src="expert_into/plunbing.jpg" alt="Image 5">
-                <div class="swiper-description text-center text-black py-1 text-2xl"> Plumbing</div>
+                <div class="swiper-description text-center py-1 text-2xl"> Plumbing</div>
               </div>
 
               <!-- Slide 5 -->
               <div class="swiper-slide">
                 <img class="w-full" src="expert_into/shades.jpg" alt="Image 5">
-                <div class="swiper-description text-center text-black py-1 text-2xl"> Sheds</div>
+                <div class="swiper-description text-center py-1 text-2xl"> Sheds</div>
               </div>
 
             </div>
@@ -653,15 +576,15 @@
     </section>
 
 
-    <br><br><hr>
+    <br><br>
 
 
 
 
 
 
-    <section class="bg-gray-300 " id="clients">
-      <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">
+    <section class="" id="clients">
+      <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center thm-col-txt">
         Clients
       </h2>
 
@@ -755,12 +678,12 @@
     </section>
 
 
-    <br><br><hr>
+    <br><br>
 
 
 
     <section>
-      <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">
+      <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center thm-col-txt">
         Follow Us on Instagram
       </h2>
 
@@ -781,27 +704,27 @@
               <!-- Slide 1 -->
               <div class="swiper-slide">
                 <img src="https://painterior.com/wp-content/uploads/2021/07/forum-atmosphere-1.jpg" alt="Image 1">
-                <div class="swiper-description text-center text-black py-3 text-2xl"> Project 1</div>
+                <div class="swiper-description text-center py-3 text-2xl"> Project 1</div>
               </div>
               <!-- Slide 2 -->
               <div class="swiper-slide">
                 <img src="https://painterior.com/wp-content/uploads/2021/07/BUENA-VISTA-1.jpg" alt="Image 2">
-                <div class="swiper-description text-center text-black py-3 text-2xl"> Project 2</div>
+                <div class="swiper-description text-center py-3 text-2xl"> Project 2</div>
               </div>
               <!-- Slide 3 -->
               <div class="swiper-slide">
                 <img src="https://painterior.com/wp-content/uploads/2021/07/ram-mhal-1.jpg" alt="Image 3">
-                <div class="swiper-description text-center text-black py-3 text-2xl"> Project 3</div>
+                <div class="swiper-description text-center py-3 text-2xl"> Project 3</div>
               </div>
               <!-- Slide 4 -->
               <div class="swiper-slide">
                 <img src="https://painterior.com/wp-content/uploads/2021/07/forum-atmosphere-1.jpg" alt="Image 4">
-                <div class="swiper-description text-center text-black py-3 text-2xl"> Project 4</div>
+                <div class="swiper-description text-center py-3 text-2xl"> Project 4</div>
               </div>
               <!-- Slide 5 -->
               <div class="swiper-slide">
                 <img src="https://painterior.com/wp-content/uploads/2021/07/BUENA-VISTA-1.jpg" alt="Image 5">
-                <div class="swiper-description text-center text-black py-3 text-2xl"> Project 5</div>
+                <div class="swiper-description text-center py-3 text-2xl"> Project 5</div>
               </div>
             </div>
             <!-- Add Pagination -->
@@ -836,7 +759,7 @@
 
 
     <section>
-      <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center text-gray-800">
+      <h2 class="w-full my-2 text-3xl font-bold leading-tight text-center thm-col-txt">
         Testmonials
       </h2>
 
@@ -858,7 +781,7 @@
           <div class="swiper-container2 w-full sm:w-3/4 py-3">
             <div class="swiper-wrapper">
               <!-- Testimonial 1 -->
-              <div class="swiper-slide w-full sm:w-1/2 md:w-1/3 p-6 bg-white rounded-lg shadow-lg mx-2">
+              <div class="swiper-slide w-full sm:w-1/2 md:w-1/3 p-6  rounded-lg shadow-lg mx-2">
                 <p class="text-gray-700 text-xl italic mb-4">"This product has truly transformed my workflow. It's so easy to use, and the results speak for themselves. Highly recommended!"</p>
                 <div class="flex items-center">
                   <img src="https://via.placeholder.com/50" alt="User Image" class="w-12 h-12 rounded-full mr-4">
@@ -870,7 +793,7 @@
               </div>
       
               <!-- Testimonial 2 -->
-              <div class="swiper-slide w-full sm:w-1/2 md:w-1/3 p-6 bg-white rounded-lg shadow-lg mx-2">
+              <div class="swiper-slide w-full sm:w-1/2 md:w-1/3 p-6  rounded-lg shadow-lg mx-2">
                 <p class="text-gray-700 text-xl italic mb-4">"I’ve been using this for a few months now and it has saved me so much time. The ease of use is unbeatable."</p>
                 <div class="flex items-center">
                   <img src="https://via.placeholder.com/50" alt="User Image" class="w-12 h-12 rounded-full mr-4">
@@ -882,7 +805,7 @@
               </div>
       
               <!-- Testimonial 3 -->
-              <div class="swiper-slide w-full sm:w-1/2 md:w-1/3 p-6 bg-white rounded-lg shadow-lg mx-2">
+              <div class="swiper-slide w-full sm:w-1/2 md:w-1/3 p-6  rounded-lg shadow-lg mx-2">
                 <p class="text-gray-700 text-xl italic mb-4">"An absolute game-changer. This tool is everything I needed and more. Worth every penny!"</p>
                 <div class="flex items-center">
                   <img src="https://via.placeholder.com/50" alt="User Image" class="w-12 h-12 rounded-full mr-4">
@@ -894,7 +817,7 @@
               </div>
       
               <!-- Testimonial 4 -->
-              <div class="swiper-slide w-full sm:w-1/2 md:w-1/3 p-6 bg-white rounded-lg shadow-lg mx-2">
+              <div class="swiper-slide w-full sm:w-1/2 md:w-1/3 p-6  rounded-lg shadow-lg mx-2">
                 <p class="text-gray-700 text-xl italic mb-4">"I've tried so many similar products, but this one is by far the best. The customer support is exceptional too!"</p>
                 <div class="flex items-center">
                   <img src="https://via.placeholder.com/50" alt="User Image" class="w-12 h-12 rounded-full mr-4">
@@ -906,7 +829,7 @@
               </div>
       
               <!-- Testimonial 5 -->
-              <div class="swiper-slide w-full sm:w-1/2 md:w-1/3 p-6 bg-white rounded-lg shadow-lg mx-2">
+              <div class="swiper-slide w-full sm:w-1/2 md:w-1/3 p-6  rounded-lg shadow-lg mx-2">
                 <p class="text-gray-700 text-xl italic mb-4">"Amazing experience overall. I love how intuitive the interface is, and the results are exactly what I needed!"</p>
                 <div class="flex items-center">
                   <img src="https://via.placeholder.com/50" alt="User Image" class="w-12 h-12 rounded-full mr-4">
@@ -955,75 +878,75 @@
 
 
 
-    <section class="bg-white border-b py-8">
+    <section class="py-8">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center thm-col-txt">
           Title
         </h2>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex-1  rounded-t rounded-b-none overflow-hidden shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              <p class="w-full text-white text-xs md:text-sm px-6">
                 xGETTING STARTED
               </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
+              <div class="w-full font-bold text-xl thm-col-txt px-6">
                 Lorem ipsum dolor sit amet.
               </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
+              <p class="thm-col-txt text-base px-6 mb-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
               </p>
             </a>
           </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+          <div class="flex-none mt-auto  rounded-b rounded-t-none overflow-hidden shadow p-6">
             <div class="flex items-center justify-start">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              <button class="mx-auto lg:mx-0 hover:underline gradient thm-col-txt font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                 Action
               </button>
             </div>
           </div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex-1  rounded-t rounded-b-none overflow-hidden shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              <p class="w-full text-white text-xs md:text-sm px-6">
                 xGETTING STARTED
               </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
+              <div class="w-full font-bold text-xl thm-col-txt px-6">
                 Lorem ipsum dolor sit amet.
               </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
+              <p class="thm-col-txt text-base px-6 mb-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
               </p>
             </a>
           </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+          <div class="flex-none mt-auto  rounded-b rounded-t-none overflow-hidden shadow p-6">
             <div class="flex items-center justify-center">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              <button class="mx-auto lg:mx-0 hover:underline gradient thm-col-txt font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                 Action
               </button>
             </div>
           </div>
         </div>
         <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-          <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex-1  rounded-t rounded-b-none overflow-hidden shadow">
             <a href="#" class="flex flex-wrap no-underline hover:no-underline">
-              <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+              <p class="w-full text-white text-xs md:text-sm px-6">
                 xGETTING STARTED
               </p>
-              <div class="w-full font-bold text-xl text-gray-800 px-6">
+              <div class="w-full font-bold text-xl thm-col-txt px-6">
                 Lorem ipsum dolor sit amet.
               </div>
-              <p class="text-gray-800 text-base px-6 mb-5">
+              <p class="thm-col-txt text-base px-6 mb-5">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula.
               </p>
             </a>
           </div>
-          <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+          <div class="flex-none mt-auto  rounded-b rounded-t-none overflow-hidden shadow p-6">
             <div class="flex items-center justify-end">
-              <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              <button class="mx-auto lg:mx-0 hover:underline gradient thm-col-txt font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                 Action
               </button>
             </div>
@@ -1034,17 +957,17 @@
 
 
 <!--     
-    <section class="bg-gray-100 py-8">
-      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+    <section class="py-8">
+      <div class="container mx-auto px-2 pt-4 pb-12 thm-col-txt">
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center thm-col-txt">
           Pricing
         </h2>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4">
-          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg  mt-4">
+            <div class="flex-1  text-white rounded-t rounded-b-none overflow-hidden shadow">
               <div class="p-8 text-3xl font-bold text-center border-b-4">
                 Free
               </div>
@@ -1054,20 +977,20 @@
                 <li class="border-b py-4">Thing</li>
               </ul>
             </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+            <div class="flex-none mt-auto  rounded-b rounded-t-none overflow-hidden shadow p-6">
+              <div class="w-full pt-6 text-3xl text-white font-bold text-center">
                 £0
                 <span class="text-base">for one user</span>
               </div>
               <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <button class="mx-auto lg:mx-0 hover:underline gradient thm-col-txt font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                   Sign Up
                 </button>
               </div>
             </div>
           </div>
-          <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10">
-            <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg  mt-4 sm:-mt-6 shadow-lg z-10">
+            <div class="flex-1  rounded-t rounded-b-none overflow-hidden shadow">
               <div class="w-full p-8 text-3xl font-bold text-center">Basic</div>
               <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>
               <ul class="w-full text-center text-base font-bold">
@@ -1077,20 +1000,20 @@
                 <li class="border-b py-4">Thing</li>
               </ul>
             </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+            <div class="flex-none mt-auto  rounded-b rounded-t-none overflow-hidden shadow p-6">
               <div class="w-full pt-6 text-4xl font-bold text-center">
                 £x.99
                 <span class="text-base">/ per user</span>
               </div>
               <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <button class="mx-auto lg:mx-0 hover:underline gradient thm-col-txt font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                   Sign Up
                 </button>
               </div>
             </div>
           </div>
-          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4">
-            <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow">
+          <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg  mt-4">
+            <div class="flex-1  text-white rounded-t rounded-b-none overflow-hidden shadow">
               <div class="p-8 text-3xl font-bold text-center border-b-4">
                 Pro
               </div>
@@ -1100,13 +1023,13 @@
                 <li class="border-b py-4">Thing</li>
               </ul>
             </div>
-            <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="w-full pt-6 text-3xl text-gray-600 font-bold text-center">
+            <div class="flex-none mt-auto  rounded-b rounded-t-none overflow-hidden shadow p-6">
+              <div class="w-full pt-6 text-3xl text-white font-bold text-center">
                 £x.99
                 <span class="text-base">/ per user</span>
               </div>
               <div class="flex items-center justify-center">
-                <button class="mx-auto lg:mx-0 hover:underline gradient text-white font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                <button class="mx-auto lg:mx-0 hover:underline gradient thm-col-txt font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                   Sign Up
                 </button>
               </div>
@@ -1117,37 +1040,32 @@
     </section> -->
     <!-- Change the colour #f8fafc to match the previous section colour -->
     <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g stroke="none" stroke-width="1" fill="#cdb35a" fill-rule="evenodd">
         <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
           <g class="wave" fill="#f8fafc">
-            <path
-              d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
-            ></path>
+            <path fill="#cdb35a" d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"></path>
           </g>
-          <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
-            <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+          <g transform="translate(1.000000, 15.000000)" fill="#cdb35a">
+            <g fill="#cdb35a" transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
               <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
-              <path
-                d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
-                opacity="0.100000001"
-              ></path>
+              <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z" opacity="0.100000001"></path>
               <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>
             </g>
           </g>
         </g>
       </g>
     </svg>
-    <section class="container mx-auto text-center py-6 mb-12">
-      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+            <section class="container mx-auto text-center py-6 mb-12">
+      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center thm-col-txt">
         Call to Action
       </h2>
       <div class="w-full mb-4">
-        <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+        <div class="h-1 mx-auto  w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
       <h3 class="my-4 text-3xl leading-tight">
         Main Hero Message to sell yourself!
       </h3>
-      <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+      <button class="mx-auto lg:mx-0 hover:underline  thm-col-txt font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         Action!
       </button>
     </section>
@@ -1158,7 +1076,7 @@
 
 
   <!-- Contact Us Section -->
-  <section class="bg-gray-100 py-8 text-black">
+  <section class="py-8 ">
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-semibold">Contact Us</h2>
@@ -1167,27 +1085,27 @@
       
       <!-- Contact Form -->
       <div class="max-w-lg mx-auto">
-        <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-lg">
+        <form action="#" method="POST" class=" p-6 rounded-lg shadow-lg">
           <!-- Name Field -->
           <div class="mb-4">
-            <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
-            <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <label for="name" class="block font-semibold mb-2">Name</label>
+            <input type="text" id="name" name="name" required class="w-full p-3 border  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
           </div>
 
           <!-- Email Field -->
           <div class="mb-4">
-            <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
-            <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <label for="email" class="block font-semibold mb-2">Email</label>
+            <input type="email" id="email" name="email" required class="w-full p-3 border  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
           </div>
 
           <!-- Message Field -->
           <div class="mb-4">
-            <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
-            <textarea id="message" name="message" rows="4" required class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            <label for="message" class="block font-semibold mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" required class="w-full p-3 border  rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
           </div>
 
           <!-- Submit Button -->
-          <button type="submit" class="w-full bg-gray-500 text-white py-3 rounded-md hover:bg-gray-600 transition duration-300">
+          <button type="submit" class="w-full   thm-col-txt py-3 rounded-md hover:bg-gray-600 transition duration-300">
             Send Message
           </button>
         </form>
@@ -1207,63 +1125,55 @@
 
 
     <!--Footer-->
-    <footer class="bg-white">
+    <footer class="">
       <div class="container mx-auto px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 mb-6 text-black">
+          <div class="flex-1 mb-6 thm-blu-txt">
            
 
-            <a class="no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-black" href="#">
-              <!--Icon from: http://www.potlabicons.com/ -->
-              <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)"></rect>
-                <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0%,0%,0%);fill-opacity:1;" d="M 68 0.0703125 C 64.230469 0.390625 60.738281 1.046875 57 2.164062 C 56.261719 2.382812 55.53125 2.589844 55.378906 2.625 C 55.21875 2.648438 55.101562 2.714844 55.101562 2.761719 C 55.101562 2.933594 55.851562 2.957031 56.351562 2.808594 C 57.460938 2.488281 59.21875 2.371094 60.671875 2.519531 C 65.890625 3.074219 71.550781 5.652344 76.320312 9.667969 C 77.808594 10.914062 80.191406 13.6875 81.03125 15.148438 C 82.109375 17.023438 82.609375 18.476562 82.800781 20.316406 C 82.96875 21.972656 82.75 23.242188 81.960938 25.09375 L 81.449219 26.300781 L 81.449219 27.625 C 81.449219 28.410156 81.511719 29.191406 81.589844 29.523438 C 81.75 30.179688 82.238281 31.378906 82.480469 31.6875 C 82.628906 31.886719 82.609375 31.917969 82.289062 32.277344 C 82.101562 32.496094 77.328125 37.535156 71.691406 43.488281 L 61.421875 54.308594 L 53.640625 46.539062 C 49.351562 42.269531 45.71875 38.640625 45.570312 38.492188 L 45.289062 38.214844 L 45.738281 36.121094 C 47.171875 29.503906 49.589844 18.222656 49.621094 18.050781 C 49.640625 17.898438 48.941406 17.371094 46.75 15.875 C 36.648438 8.976562 28.558594 3.417969 27.050781 2.3125 C 26.390625 1.839844 25.800781 1.4375 25.730469 1.425781 C 25.640625 1.40625 22.128906 5.042969 19.378906 8.011719 L 18.710938 8.738281 L 23.980469 14.296875 C 30.660156 21.339844 31.738281 22.480469 32.320312 23.089844 L 32.78125 23.585938 L 32.179688 25.808594 C 31.851562 27.027344 31.5 28.339844 31.398438 28.71875 C 31.03125 30.113281 30.210938 33.105469 30.128906 33.371094 C 30.039062 33.632812 29.679688 33.75 25.300781 35.0625 C 20.769531 36.421875 20.550781 36.476562 20.359375 36.28125 C 20.261719 36.179688 17.078125 32.839844 13.320312 28.859375 L 6.46875 21.640625 L 6.210938 21.90625 C 2.441406 25.851562 0.109375 28.351562 0.0703125 28.476562 C 0.0390625 28.570312 1.53125 30.882812 3.769531 34.199219 C 7.628906 39.917969 10.351562 43.996094 14.089844 49.691406 C 15.269531 51.488281 16.289062 52.949219 16.371094 52.949219 C 16.5 52.949219 17.160156 52.824219 19.648438 52.316406 C 20.148438 52.214844 21.058594 52.027344 21.679688 51.902344 C 22.289062 51.785156 23.308594 51.578125 23.929688 51.453125 C 24.539062 51.339844 25.570312 51.132812 26.199219 51.003906 C 26.828125 50.878906 27.871094 50.671875 28.5 50.542969 C 29.128906 50.417969 30.171875 50.210938 30.800781 50.082031 C 31.429688 49.957031 32.488281 49.738281 33.148438 49.613281 C 33.808594 49.472656 34.578125 49.324219 34.851562 49.265625 L 35.351562 49.175781 L 36.601562 50.578125 C 37.839844 51.984375 46.109375 61.238281 46.828125 62.03125 L 47.199219 62.457031 L 42.828125 66.878906 C 40.421875 69.316406 35.601562 74.199219 32.101562 77.742188 C 28.609375 81.277344 23.769531 86.167969 21.359375 88.621094 C 12.429688 97.65625 9.089844 101.03125 6.839844 103.320312 C 5.558594 104.609375 4.269531 105.980469 3.96875 106.359375 C 2.78125 107.84375 2.410156 109.511719 2.941406 111.113281 C 3.230469 112.011719 3.589844 112.667969 4.320312 113.632812 C 4.921875 114.429688 13.339844 123.328125 14.179688 124.050781 C 14.878906 124.660156 16.109375 125.363281 17.101562 125.722656 C 17.710938 125.941406 18.070312 125.984375 19.050781 125.984375 C 20.441406 125.984375 21.011719 125.824219 21.988281 125.15625 C 22.621094 124.71875 23.488281 123.765625 36.550781 109.238281 C 38.808594 106.726562 41.441406 103.804688 42.398438 102.734375 C 44.101562 100.847656 45.320312 99.5 54.148438 89.667969 C 60.441406 82.660156 62.78125 80.09375 62.851562 80.105469 C 62.898438 80.105469 71 89.164062 77 95.941406 C 78.238281 97.335938 81.949219 101.511719 85.25 105.207031 C 88.550781 108.914062 93.121094 114.039062 95.398438 116.605469 C 102.46875 124.535156 102.828125 124.9375 103.5 125.492188 C 104.851562 126.585938 105.910156 127.183594 107.398438 127.65625 C 108.511719 128.011719 110.828125 128.058594 111.980469 127.734375 C 114.53125 127.03125 116.710938 125.375 118.308594 122.933594 C 118.839844 122.140625 119.628906 120.242188 119.839844 119.25 C 120.550781 116.027344 119.679688 112.78125 117.429688 110.261719 C 116.78125 109.523438 81.5 74.257812 73.808594 66.648438 C 72.488281 65.347656 71.421875 64.230469 71.421875 64.171875 C 71.421875 64.105469 74.179688 61.15625 77.539062 57.613281 C 80.898438 54.066406 85.601562 49.117188 87.988281 46.59375 L 92.320312 42.027344 L 93.101562 42.660156 C 94.011719 43.382812 95.070312 43.984375 96 44.269531 C 96.980469 44.582031 99.128906 44.558594 100.488281 44.222656 C 101.761719 43.914062 102.519531 43.902344 103.539062 44.203125 C 105.480469 44.765625 106.941406 46.101562 109.878906 49.992188 L 111.078125 51.578125 L 110.101562 52.671875 C 109.308594 53.558594 109.070312 53.917969 108.789062 54.59375 C 108.46875 55.367188 108.449219 55.503906 108.449219 56.574219 C 108.449219 57.554688 108.488281 57.839844 108.730469 58.53125 C 109.261719 60.085938 110.371094 61.433594 111.75 62.167969 C 112.699219 62.6875 113.328125 62.847656 114.410156 62.847656 C 115.519531 62.847656 116.328125 62.59375 117.140625 61.996094 C 117.648438 61.617188 126.058594 52.847656 126.871094 51.84375 C 128.191406 50.222656 128.359375 47.746094 127.300781 45.6875 C 126.769531 44.648438 125.691406 43.511719 124.78125 43.003906 C 123.738281 42.441406 123.28125 42.3125 122.148438 42.3125 C 121.121094 42.3125 120.511719 42.476562 119.660156 42.957031 L 119.28125 43.175781 L 119.03125 42.914062 C 118.53125 42.394531 117.070312 40.324219 116.480469 39.308594 C 116.148438 38.734375 115.390625 37.15625 114.800781 35.796875 C 113.550781 32.921875 113.300781 32.402344 112.46875 31.078125 C 111.46875 29.46875 109.238281 26.507812 108.191406 25.382812 C 107.050781 24.171875 103.109375 19.925781 102.25 18.992188 C 100.941406 17.566406 93.941406 10.039062 93.351562 9.425781 C 92.339844 8.355469 91.039062 7.21875 89.660156 6.160156 C 85.460938 2.945312 81.050781 1.117188 75.449219 0.277344 C 74.289062 0.105469 69.269531 -0.0351562 68 0.0703125 Z M 111.609375 113.046875 C 112.511719 113.335938 113.421875 114.070312 113.949219 114.902344 C 114.539062 115.808594 114.738281 116.546875 114.738281 117.753906 C 114.738281 118.640625 114.710938 118.8125 114.371094 119.609375 C 113.738281 121.128906 112.640625 122.058594 111.019531 122.453125 C 109.988281 122.695312 108.980469 122.53125 107.949219 121.957031 C 107.078125 121.472656 106.75 121.09375 106.488281 120.230469 C 105.878906 118.226562 106.320312 115.441406 107.488281 113.933594 C 107.988281 113.277344 108.539062 112.96875 109.398438 112.828125 C 110.199219 112.703125 110.75 112.757812 111.609375 113.046875 Z M 111.609375 113.046875 "/>
-              </svg>
-              SK CONTRACTORS
-            </a>
   
             
           </div>
           <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Links</p>
+            <p class="uppercase text-white md:mb-6">Links</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">FAQ</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Help</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Support</a>
               </li>
             </ul>
           </div>
 
           <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Social</p>
+            <p class="uppercase text-white md:mb-6">Social</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Facebook</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Linkedin</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Twitter</a>
               </li>
             </ul>
           </div>
           <div class="flex-1">
-            <p class="uppercase text-gray-500 md:mb-6">Company</p>
+            <p class="uppercase text-white md:mb-6">Company</p>
             <ul class="list-reset mb-6">
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official Blog</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Official Blog</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">About Us</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">About Us</a>
               </li>
               <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
+                <a href="#" class="no-underline hover:underline thm-col-txt hover:text-pink-500">Contact</a>
               </li>
             </ul>
           </div>
@@ -1303,33 +1213,33 @@
         scrollpos = window.scrollY;
 
         if (scrollpos > 10) {
-          header.classList.add("bg-white");
-          navaction.classList.remove("bg-white");
-          navaction.classList.add("gradient");
-          navaction.classList.remove("text-gray-800");
-          // navaction.classList.add("text-white");
+          header.classList.add("");
+          navaction.classList.remove("");
+          // navaction.classList.add("gradient");
+          navaction.classList.remove("thm-col-txt");
+          // navaction.classList.add("thm-col-txt");
           //Use to switch toggleColour colours
           for (var i = 0; i < toToggle.length; i++) {
-            toToggle[i].classList.add("text-gray-800");
-            toToggle[i].classList.remove("text-white");
+            toToggle[i].classList.add("thm-col-txt");
+            toToggle[i].classList.remove("thm-col-txt");
           }
           header.classList.add("shadow");
           navcontent.classList.remove("bg-gray-100");
-          navcontent.classList.add("bg-white");
+          navcontent.classList.add("");
         } else {
-          header.classList.remove("bg-white");
-          navaction.classList.remove("gradient");
-          navaction.classList.add("bg-white");
-          navaction.classList.remove("text-white");
-          navaction.classList.add("text-gray-800");
+          header.classList.remove("");
+          // navaction.classList.remove("gradient");
+          navaction.classList.add("");
+          navaction.classList.remove("thm-col-txt");
+          navaction.classList.add("thm-col-txt");
           //Use to switch toggleColour colours
           for (var i = 0; i < toToggle.length; i++) {
-            toToggle[i].classList.add("text-white");
-            toToggle[i].classList.remove("text-gray-800");
+            toToggle[i].classList.add("thm-col-txt");
+            toToggle[i].classList.remove("thm-col-txt");
           }
 
           header.classList.remove("shadow");
-          navcontent.classList.remove("bg-white");
+          navcontent.classList.remove("");
           navcontent.classList.add("bg-gray-100");
         }
       });

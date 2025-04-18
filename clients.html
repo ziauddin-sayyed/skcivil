@@ -81,6 +81,7 @@
       border-collapse: collapse;
       width: 100%;
       margin-top: 20px;
+      
     }
     th, td {
       padding: 10px;
@@ -91,6 +92,9 @@
       background-color: #f4f4f4;
     }
 
+    #table-container{
+        min-height: 90vh;
+    }
   </style>
 
 
@@ -131,7 +135,7 @@
             </svg>
           </button>
         </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white text-black p-4 lg:p-0 z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
               <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
@@ -154,8 +158,10 @@
       <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
     </nav>
 
-    <div id="table-container">Loading...</div>
+    <div class="pt-24">
 
+    <div class="text-gray-800" id="table-container">Loading...</div>
+    </div>
     <!--Footer-->
     <footer class="bg-white">
       <div class="container mx-auto px-8">
@@ -219,7 +225,7 @@
           </div>
         </div>
       </div>
-      <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a>
+      <!-- <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a> -->
       <style>
         .floating-icon {
             position: fixed;

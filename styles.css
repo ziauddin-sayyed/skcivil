@@ -77,3 +77,19 @@
   .thm-brd-clr{
     border-color: #cdb35a;
   }
+  .floating-icon {
+    position: fixed;
+    right: 20px; /* 20px from the right edge of the screen */
+    bottom: 20px; /* 20px from the bottom edge of the screen */
+    z-index: 9999; /* Make sure the icon stays on top */
+    display: flex;
+    align-items: self-end;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

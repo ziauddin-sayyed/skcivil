@@ -18,7 +18,14 @@
     <link rel="stylesheet" href="styles.css">
 
   </head>
+  
   <body class="leading-normal bg-black tracking-normal thm-col-txt gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+
+    <div id="fadeDiv" class="fixed inset-0 flex items-center justify-center bg-white z-50 opacity-100 transition-opacity duration-700">
+      <img src="loader.gif" alt="Loading..." class="w-20 h-20" />
+    </div>
+  
+
     <!--Nav-->
     <nav id="header"  class=" bg-black  fixed w-full z-30 top-0 thm-col-txt">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
@@ -1184,17 +1191,6 @@
         </div>
       </div>
       <!-- <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a> -->
-      <style>
-        .floating-icon {
-            position: fixed;
-            right: 20px; /* 20px from the right edge of the screen */
-            bottom: 20px; /* 20px from the bottom edge of the screen */
-            z-index: 9999; /* Make sure the icon stays on top */
-            display: flex;
-            align-items: self-end;
-        }
-        
-        </style>
       <div class="floating-icon">
         <a target="_blank" href="tel:+919769039997"><img style="max-width: initial;height: 8.3vh;" src="call_icon.svg" alt="" srcset=""></a>
         &nbsp;
@@ -1205,6 +1201,22 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   -->
     <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const fadeDiv = document.getElementById('fadeDiv');
+            
+            // Start fade out after 2 seconds
+            setTimeout(function() {
+                fadeDiv.classList.add('fade-out');
+                
+                // Optional: Remove div from DOM after fade completes
+                setTimeout(function() {
+                    fadeDiv.style.display = 'none';
+                }, 1000); // Match this with the CSS animation duration
+            }, 1000); // 2 seconds delay before fade starts
+
+
+    });
+
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");
       var navcontent = document.getElementById("nav-content");

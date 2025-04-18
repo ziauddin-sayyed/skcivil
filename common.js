@@ -30,3 +30,18 @@
         }
         return false;
       }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        const fadeDiv = document.getElementById('fadeDiv');
+              
+              // Start fade out after 2 seconds
+              setTimeout(function() {
+                  fadeDiv.classList.add('fade-out');
+                  
+                  // Optional: Remove div from DOM after fade completes
+                  setTimeout(function() {
+                      fadeDiv.style.display = 'none';
+                  }, 1000); // Match this with the CSS animation duration
+              }, 1000); // 2 seconds delay before fade starts
+      });
+  
